@@ -51,7 +51,7 @@ router.post('/login',[
 ], async (req, res) => {
    const errors = validationResult(req)
    if (!errors.isEmpty()) {
-      res.send({ errors: errors.array() });
+      return res.send({ errors: errors.array() });
    }
    try{
    //checks if user exists in db   
