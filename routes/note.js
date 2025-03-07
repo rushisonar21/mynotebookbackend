@@ -31,7 +31,7 @@ router.post('/addNote',fetchUser,[
             user: req.user.id,
             title: req.body.title,
             description: req.body.description,
-            tag: req.tag
+            tag: req.body.tag
         })
         return res.status(200).json(notes)
     }
